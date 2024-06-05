@@ -112,6 +112,17 @@ class Reporte:
             Reporte.quicksort(arr, pi + 1, high)
 
     def sort_proyectos_empresa_mergesort(self):
+        select_p=[]
+        #Pedir empresa a consultar
+        emp=input("Selecione empresa a consultar: ")
+
+        #Pedir rango de fechas
+        f_min=dt.datetime.strptime(input("Introduzca la fecha minima A-M-D: "),"%Y-%m-%d")
+        f_max=dt.datetime.strptime(input("Introduzca la fecha maxima A-M-D: "),"%Y-%m-%d")
+
+        for proyecto in self.proyectos:
+            if proyecto.empresa==emp:
+                select_p.append(proyecto)
         pass
 
     def sort_proyectos_progreso_heapsort(self):

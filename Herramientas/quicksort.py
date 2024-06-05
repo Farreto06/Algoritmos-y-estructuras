@@ -23,7 +23,3 @@ def quicksort(arr, low, high):
         pi = partition(arr, low, high)
         quicksort(arr, low, pi - 1)
         quicksort(arr, pi + 1, high)
-
-def filtrar_fechas(fechas, fecha_inicio, fecha_fin):
-    fechas_filtradas = [fecha for fecha in fechas if fecha_inicio <= fecha <= fecha_fin]
-    return fechas_filtradas
